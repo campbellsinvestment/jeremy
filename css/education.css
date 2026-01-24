@@ -1,0 +1,338 @@
+/* =====================================================
+   EDUCATION PAGE STYLES
+   ===================================================== */
+
+/* ----- Hero Section ----- */
+.edu-hero {
+  padding: calc(70px + var(--space-3xl)) 0 var(--space-2xl);
+  background: linear-gradient(135deg, var(--dark) 0%, var(--blue-accent) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(12, 206, 173, 0.1) 0%, transparent 50%);
+}
+
+.edu-hero h1 {
+  color: var(--white);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--space-sm);
+  position: relative;
+  z-index: 2;
+}
+
+.edu-hero .lead {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ----- Section Heading ----- */
+.section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--blue-accent));
+  border-radius: 2px;
+}
+
+.section-heading.text-white {
+  color: var(--white);
+}
+
+/* ----- Education Timeline Section ----- */
+.edu-timeline-section {
+  padding: var(--space-3xl) 0;
+  background: var(--gray-50);
+}
+
+.edu-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--teal), var(--blue-accent));
+  border-radius: 2px;
+}
+
+.edu-item {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.edu-item::before {
+  content: '';
+  position: absolute;
+  left: 113px;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  background: var(--teal);
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+.edu-item.featured::before {
+  background: gold;
+  width: 20px;
+  height: 20px;
+  left: 111px;
+}
+
+.edu-year {
+  flex: 0 0 100px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--teal);
+  text-align: right;
+  padding-top: 25px;
+}
+
+.edu-content {
+  flex: 1;
+  display: flex;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  margin-left: var(--space-lg);
+}
+
+.edu-content:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.edu-details {
+  flex: 1;
+}
+
+.edu-details h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+  color: var(--dark);
+}
+
+.edu-institution {
+  color: var(--blue-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+}
+
+.edu-details p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.award-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+  color: var(--dark);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: var(--space-sm);
+}
+
+.edu-logo {
+  flex: 0 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: var(--space-md);
+}
+
+.edu-logo img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* ----- Documents Section ----- */
+.documents-section {
+  padding: var(--space-3xl) 0;
+  background: var(--white);
+}
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.document-card {
+  text-align: center;
+  padding: var(--space-2xl);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.document-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.document-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-md);
+}
+
+.document-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.document-card p {
+  color: var(--text-light);
+  margin-bottom: var(--space-lg);
+}
+
+/* ----- Achievements Section ----- */
+.achievements-section {
+  padding: var(--space-3xl) 0;
+  background: var(--blue-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: 30px 30px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.achievement-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.achievement-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.achievement-year {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--white);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.achievement-item h4 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.achievement-item p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .edu-timeline::before {
+    left: 20px;
+  }
+
+  .edu-item {
+    flex-direction: column;
+    padding-left: 50px;
+  }
+
+  .edu-item::before {
+    left: 13px;
+    top: 0;
+  }
+
+  .edu-item.featured::before {
+    left: 11px;
+  }
+
+  .edu-year {
+    text-align: left;
+    padding-top: 0;
+    margin-bottom: var(--space-xs);
+  }
+
+  .edu-content {
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .edu-logo {
+    padding-left: 0;
+    padding-top: var(--space-md);
+    justify-content: flex-start;
+  }
+
+  .documents-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
