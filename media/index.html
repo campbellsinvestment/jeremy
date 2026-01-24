@@ -15,8 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto+Slab:wght@400;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/media.css">
+  <link rel="stylesheet" href="/css/main.css?v=3">
+  <link rel="stylesheet" href="/css/media.css?v=3">
 </head>
 <body>
   
@@ -49,6 +49,48 @@
     <div class="container">
       <h1>Media</h1>
       <p class="lead">Capturing moments from my professional journey</p>
+    </div>
+  </section>
+  
+  <!-- YouTube Videos Section -->
+  <section class="video-section">
+    <div class="container">
+      <h2 class="gallery-title">Video Content</h2>
+      <p class="gallery-subtitle">Leadership insights and professional development from my YouTube channel</p>
+      
+      <div class="video-grid">
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/KQb9EDlyQZo" title="Happiness at Work" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <h3 class="video-title">Happiness at Work</h3>
+        </div>
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/zIGVxUcWk1A" title="Being Happy at Work" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <h3 class="video-title">Being Happy at Work</h3>
+        </div>
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/KQsdh0JO0MY" title="True Leadership" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <h3 class="video-title">True Leadership</h3>
+        </div>
+        <div class="video-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/Ln0FIHiAsEg" title="The 4 I's of Transformational Leadership" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <h3 class="video-title">The 4 I's of Transformational Leadership</h3>
+        </div>
+      </div>
+      
+      <div class="channel-cta">
+        <a href="https://www.youtube.com/@Dr.JayCee" target="_blank" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          Visit My Channel
+        </a>
+      </div>
     </div>
   </section>
   
@@ -234,14 +276,12 @@
     document.querySelectorAll('.gallery-item').forEach(item => {
       item.addEventListener('click', function() {
         const img = this.querySelector('img');
-        const caption = this.getAttribute('data-caption') || img.alt;
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
         lightbox.innerHTML = `
           <div class="lightbox-content">
             <button class="lightbox-close">&times;</button>
             <img src="${img.src}" alt="${img.alt}">
-            <div class="lightbox-caption">${caption}</div>
           </div>
         `;
         document.body.appendChild(lightbox);
