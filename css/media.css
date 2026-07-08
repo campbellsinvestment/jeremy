@@ -163,6 +163,25 @@
   transform: scale(1.08);
 }
 
+/* ----- Single full-view image ----- */
+.gallery-grid--single {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-item--full {
+  aspect-ratio: auto;
+  width: auto;
+  max-width: 480px;
+  background: transparent;
+}
+
+.gallery-item--full img {
+  height: auto;
+  max-height: 640px;
+  object-fit: contain;
+}
+
 .gallery-item::after {
   content: '';
   position: absolute;

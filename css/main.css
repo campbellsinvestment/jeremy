@@ -399,6 +399,15 @@ p {
   color: var(--teal-light);
 }
 
+@media (max-width: 600px) {
+  .footer-line {
+    display: block;
+  }
+  .footer-sep {
+    display: none;
+  }
+}
+
 /* ----- Utilities ----- */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
